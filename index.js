@@ -6,7 +6,7 @@ $(document).ready(function(){
     $img = $('.car img');
     let flag = true;
 
-    const cars=['./images/Img_05.png','./images/Img_06.png']
+    const cars=['./images/car1.png','./images/car2.png']
 
     $(document).on('keypress',function(e){
        // console.log(e.which); to get keycode

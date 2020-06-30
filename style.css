@@ -1,7 +1,6 @@
 body{
     margin:0;
     padding: 0;
-    background:linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
     overflow-y: hidden ;
 }
 
@@ -10,7 +9,7 @@ body{
     width: 100vw;
     margin: 0 auto;
     border: 1px black solid;
-    background: url(images/Img_1.png);
+    background: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.1)), url(images/bg.jpg);
     background-size: cover ;
     position: relative;
     box-shadow: 1px 2px 60px rgba(0, 0, 0, 0.1);
@@ -20,12 +19,14 @@ body{
 .surface{
     height: 140px;
     width: 500%;
-    background: url(images/Img_02.png);
+    background: url(images/road.png);
     display: block;
     position: absolute;
     bottom: 0%;
     left: 0%;
     background-repeat: repeat-x;
+    z-index: 9999;
+
 }
 .car
 {
@@ -37,7 +38,7 @@ body{
     animation: moveRight 10s linear infinite;
 }
 .moveFast{
-    animation: moveRight 1s linear infinite;
+    animation: moveRight 2s linear infinite;
     
 }
 .suspension{
