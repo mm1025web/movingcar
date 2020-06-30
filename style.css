@@ -18,7 +18,7 @@ body{
 
 .surface{
     height: 140px;
-    width: 500%;
+    width: 5000%;
     background: url(images/road.png);
     display: block;
     position: absolute;
@@ -36,10 +36,14 @@ body{
 }
 .moveRight{
     animation: moveRight 10s linear infinite;
+    animation-delay: 2s;
 }
 .moveFast{
-    animation: moveRight 2s linear infinite;
-    
+    animation: moveRight 2s linear infinite;   
+}
+.moveMed{
+    animation: moveRight 3s linear infinite;   
+       
 }
 .suspension{
     animation: suspension 1s linear infinite;
