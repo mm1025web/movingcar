@@ -1,5 +1,6 @@
 $(document).ready(function(){
  
+    alert("Press Enter to start and Spacebar to turn off the lights.")
     $surface = $('.surface');
     $car = $('.car');
     $img = $('.car img');
