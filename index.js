@@ -14,6 +14,9 @@ $(document).ready(function(){
             $($surface).toggleClass('moveRight');
             $($car).toggleClass('suspension');
         }
+        if(e.which == 119){
+            $($surface).toggleClass('moveFast');
+        }
     })
     $(document).on('keypress',function(e){
          if(e.which==32){
@@ -30,3 +33,8 @@ $(document).ready(function(){
      })
 
 });
+$(window).ready(function(){
+    setTimeout(function(){
+       alert("Press W to speed up!")
+    }, 4000);
+ });

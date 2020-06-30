@@ -34,7 +34,11 @@ body{
     left: 24%;
 }
 .moveRight{
-    animation: moveRight 6s linear infinite;
+    animation: moveRight 10s linear infinite;
+}
+.moveFast{
+    animation: moveRight 1s linear infinite;
+    
 }
 .suspension{
     animation: suspension 1s linear infinite;
