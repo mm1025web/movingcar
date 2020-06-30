@@ -50,5 +50,6 @@ else{
     $(document).ready(function(){
             $($surface).toggleClass('moveMed');
             $($car).toggleClass('suspension');
+            $('audio#start')[0].play();
     });
 }
