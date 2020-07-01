@@ -5,15 +5,27 @@ body{
 }
 
 .night{
-    height: 100vh;
+    height: 95vh;
     width: 100vw;
     margin: 0 auto;
     border: 1px black solid;
-    background: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.1)), url(images/bg.jpg);
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.1)), url(images/bg3.jpg);
     background-size: cover ;
     position: relative;
     box-shadow: 1px 2px 60px rgba(0, 0, 0, 0.1);
     overflow-x: hidden;
+}
+.slide{
+    -webkit-animation: slide 200s linear infinite;
+    -webkit-animation-delay: 2s;
+}
+.slideFast{
+    -webkit-animation: slide 100s linear infinite;
+    -webkit-animation-delay: 2s;
+}
+@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -4000px 0; }
 }
 
 .surface{
