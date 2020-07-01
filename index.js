@@ -67,14 +67,7 @@ if($(window).width() >= 700){
         })
         $(document).on('keypress',function(e){
             if(e.which==32){
-                if(flag){
-                    flag = false;
-                    $img.attr('src',cars[0]);
-                }
-                else{
-                    flag = true;
-                    $img.attr('src',cars[1]);
-                }
+               $('img.vehicle').toggleClass('vehicle2');
             }
             if(e.which == 104){
                    $('audio#horn')[0].play();
@@ -135,12 +128,6 @@ else if($(window).width() <= 700){
          });
          $('#roar').click(function(){
             $('audio#acc')[0].play();
-         });
-        
-        
-            
-          
-        
-            
+         });         
     
 }
