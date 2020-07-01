@@ -61,6 +61,12 @@ body{
     box-shadow: 1px 2px 60px rgba(0, 0, 0, 0.1);
     overflow-x: hidden;
 }
+.vehicle{
+    content: url(images/car1.png);
+}
+.vehicle2{
+    content: url(images/car2.png);
+}
 .slide{
     -webkit-animation: slide 200s linear infinite;
     -webkit-animation-delay: 2s;
@@ -97,6 +103,7 @@ body{
 }
 .moveFast{
     animation: moveRight 2s linear infinite;  
+    animation-delay: 1s;
 }
 
 .suspension{
@@ -130,5 +137,20 @@ body{
     .buttons{
         display: flex!important;
     }
-    
+    .moveRight{
+        animation: moveRight 10s linear infinite;
+        animation-delay: 0!important;
+    }
+    .moveFast{
+        animation: moveRight 1s linear infinite;  
+        animation-delay: 1s;
+    }
+    .slide{
+        -webkit-animation: slide 200s linear infinite;
+        -webkit-animation-delay: 0s;
+    }
+    .slideFast{
+        -webkit-animation: slide 80s linear infinite;
+        -webkit-animation-delay: 0s;
+    }
 }

@@ -114,19 +114,19 @@ else if($(window).width() <= 700){
     $night = $('.night');
     const cars=['./images/car2.png','./images/car1.png'];
 
-        $(window).ready(function(){ 
+      
             $($surface).toggleClass('moveRight');
             $($car).toggleClass('suspension');
             $($night).toggleClass('slide');
 
-         });   
+           
 
          
          $('#horn').click(function(){
             $('audio#horn')[0].play();
          });
          $('#light').click(function(){
-            $img.attr('src',cars[0]);
+            $('img.vehicle').toggleClass('vehicle2');
          });
          $('#fast').click(function(){
             $($surface).toggleClass('moveFast');
