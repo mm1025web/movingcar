@@ -2,8 +2,54 @@ body{
     margin:0;
     padding: 0;
     overflow-y: hidden ;
+    background-color: black;
+}
+.buttons{
+    display: none!important;
+    margin: 10px 0px;
 }
 
+.buttons i {
+    position: relative; 
+    top: 0;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgb(27,27,27);
+    cursor: pointer; 
+    transition: all .2s ease-in-out;
+  }
+  
+  .buttons i:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 0 1px #fff;
+    transition: all .2s ease-in-out;
+  }
+  
+  .buttons i:hover {
+    background-color: #fff; 
+  }
+  
+  .buttons i:hover:after {
+    opacity: 1;  
+    transform: scale(1.12);
+    transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+  }
+  
+  .buttons i:hover {
+    color: #111;
+  }
 .night{
     height: 95vh;
     width: 100vw;
@@ -38,7 +84,6 @@ body{
     left: 0%;
     background-repeat: repeat-x;
     z-index: 9999;
-
 }
 .car
 {
@@ -51,12 +96,9 @@ body{
     animation-delay: 2s;
 }
 .moveFast{
-    animation: moveRight 2s linear infinite;   
+    animation: moveRight 2s linear infinite;  
 }
-.moveMed{
-    animation: moveRight 3s linear infinite;   
-       
-}
+
 .suspension{
     animation: suspension 1s linear infinite;
 }
@@ -76,4 +118,17 @@ body{
     0%{
         transform:translateY(-1px);
     }
+}
+@media(max-width:700px){
+    body{
+        height: 100vh;
+    }
+    .surface{
+        bottom: 0;
+        width: 99999999999%;
+    }
+    .buttons{
+        display: flex!important;
+    }
+    
 }

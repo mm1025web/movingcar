@@ -1,8 +1,46 @@
+// $(document).ready(function(){
+
+//     var lFollowX = 0,
+//     lFollowY = 0,
+//     x = 0,
+//     y = 0,
+//     friction = 1 / 30;
+
+//         function moveBackground() {
+//         x += (lFollowX - x) * friction;
+//         y += (lFollowY - y) * friction;
+
+//         translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+//         $('.night').css({
+//             '-webit-transform': translate,
+//             '-moz-transform': translate,
+//             'transform': translate
+//         });
+
+//         window.requestAnimationFrame(moveBackground);
+//         }
+
+//         $(window).on('mousemove click', function(e) {
+
+//         var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+//         var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+//         lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+//         lFollowY = (10 * lMouseY) / 100;
+
+//         });
+
+//         moveBackground();
+
+// });
+
+
 if($(window).width() >= 700){
+
   $(document).ready(function(){
  
         // alert("Press Enter to start and Spacebar to turn off the lights.")
-        $night = $('.night')
+        $night = $('.night');
         $surface = $('.surface');
         $car = $('.car');
         $img = $('.car img');
@@ -23,7 +61,7 @@ if($(window).width() >= 700){
                 $($surface).toggleClass('moveFast');
                $($night).toggleClass('slideFast');
 
-                $('audio#fast')[0].play();
+                $('audio#faster')[0].play();
 
             }
         })
@@ -65,90 +103,44 @@ if($(window).width() >= 700){
             $('#myModal3').modal('show');
         }, 12000);
      });
- 
- 
-     var lFollowX = 0,
-            lFollowY = 0,
-            x = 0,
-            y = 0,
-            friction = 1 / 30;
 
-        function moveBackground() {
-        x += (lFollowX - x) * friction;
-        y += (lFollowY - y) * friction;
-        
-        translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
-
-        $('.night').css({
-            '-webit-transform': translate,
-            '-moz-transform': translate,
-            'transform': translate
-        });
-
-        window.requestAnimationFrame(moveBackground);
-        }
-
-        $(window).on('mousemove click', function(e) {
-
-        var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
-        var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
-        lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
-        lFollowY = (10 * lMouseY) / 100;
-
-        });
-
-        moveBackground();
 }
 
 
 else if($(window).width() <= 700){
-            var lFollowX = 0,
-            lFollowY = 0,
-            x = 0,
-            y = 0,
-            friction = 1 / 30;
-
-        function moveBackground() {
-        x += (lFollowX - x) * friction;
-        y += (lFollowY - y) * friction;
-
-        translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
-
-        $('.night').css({
-            '-webit-transform': translate,
-            '-moz-transform': translate,
-            'transform': translate
-        });
-
-        window.requestAnimationFrame(moveBackground);
-        }
-
-        $(window).on('mousemove click', function(e) {
-
-        var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
-        var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
-        lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
-        lFollowY = (10 * lMouseY) / 100;
-
-        });
-
-        moveBackground();
-
-
     $surface = $('.surface');
     $car = $('.car');
     $img = $('.car img');
+    $night = $('.night');
     const cars=['./images/car2.png','./images/car1.png'];
 
-    $(window).ready(function(){ 
-            $img.attr('src',cars[0]);
-            $($surface).toggleClass('moveMed');
+        $(window).ready(function(){ 
+            $($surface).toggleClass('moveRight');
             $($car).toggleClass('suspension');
-            $(document).on('tap',function(){
-                
-                    $('audio#start')[0].play();
-                
-            })
+            $($night).toggleClass('slide');
+
+         });   
+
+         
+         $('#horn').click(function(){
+            $('audio#horn')[0].play();
+         });
+         $('#light').click(function(){
+            $img.attr('src',cars[0]);
+         });
+         $('#fast').click(function(){
+            $($surface).toggleClass('moveFast');
+            $($night).toggleClass('slideFast');
+            $('audio#faster')[0].play();
+         });
+         $('#roar').click(function(){
+            $('audio#acc')[0].play();
+         });
+        
+        
             
-    });
+          
+        
+            
+    
 }
