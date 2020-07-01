@@ -68,14 +68,14 @@ body{
     content: url(images/car2.png);
 }
 .slide{
-    -webkit-animation: slide 200s linear infinite;
-    -webkit-animation-delay: 2s;
+    animation: slide 200s linear infinite;
+    animation-delay: 2s;
 }
 .slideFast{
-    -webkit-animation: slide 100s linear infinite;
-    -webkit-animation-delay: 2s;
+    animation: slide 100s linear infinite;
+    animation-delay: 2s;
 }
-@-webkit-keyframes slide {
+@keyframes slide {
     from { background-position: 0 0; }
     to { background-position: -4000px 0; }
 }
@@ -146,11 +146,11 @@ body{
         animation-delay: 1s;
     }
     .slide{
-        -webkit-animation: slide 200s linear infinite;
-        -webkit-animation-delay: 0s;
+        animation: slide 200s linear infinite;
+        animation-delay: 0s;
     }
     .slideFast{
-        -webkit-animation: slide 80s linear infinite;
-        -webkit-animation-delay: 0s;
+        animation: slide 80s linear infinite;
+        animation-delay: 0s;
     }
 }
