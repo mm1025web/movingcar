@@ -147,7 +147,7 @@ ul{
         animation-delay: 0!important;
     }
     .moveFast{
-        animation: moveRight 1s linear infinite;  
+        animation: moveRight 3s linear infinite;  
         animation-delay: 1s;
     }
     .slide{
