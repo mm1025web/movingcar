@@ -4,9 +4,14 @@ body{
     overflow-y: hidden ;
     background-color: black;
 }
+ul{
+    list-style: none;
+}
 .buttons{
     display: none!important;
     margin: 10px 0px;
+    border: none!important;
+    outline: none!important;
 }
 
 .buttons i {
@@ -21,9 +26,9 @@ body{
     background-color: rgb(27,27,27);
     cursor: pointer; 
     transition: all .2s ease-in-out;
-  }
+}
   
-  .buttons i:after {
+.buttons i:after {
     content: '';
     position: absolute;
     top: 0;
@@ -35,21 +40,21 @@ body{
     opacity: 0;
     box-shadow: 0 0 0 1px #fff;
     transition: all .2s ease-in-out;
-  }
-  
-  .buttons i:hover {
+}
+
+.buttons i:hover {
     background-color: #fff; 
-  }
-  
-  .buttons i:hover:after {
+}
+
+.buttons i:hover:after {
     opacity: 1;  
     transform: scale(1.12);
     transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
-  }
-  
-  .buttons i:hover {
+}
+
+.buttons i:hover {
     color: #111;
-  }
+}
 .night{
     height: 95vh;
     width: 100vw;
