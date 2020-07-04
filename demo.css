@@ -13,6 +13,9 @@
     overflow: hidden;
 
 }
+ul{
+    margin-top: 90px;
+}
 .buttons{
     margin: 10px 0px;
     border: none!important;
