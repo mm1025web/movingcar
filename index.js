@@ -56,6 +56,7 @@ if($(window).width() >= 700){
                $($night).toggleClass('slide');
                $($surface).toggleClass('moveRight');
                 $($car).toggleClass('suspension');
+                    $('audio#drive')[0].play();
             }
             if(e.which == 119){
                 $($surface).toggleClass('moveFast');
@@ -81,6 +82,9 @@ if($(window).width() >= 700){
 
     });
 
+    $(window).ready(function(){
+        
+     });
     
    
     $(document).ready(function(){
@@ -111,9 +115,6 @@ else if($(window).width() <= 700){
             $($surface).toggleClass('moveRight');
             $($car).toggleClass('suspension');
             $($night).toggleClass('slide');
-
-           
-
          
          $('#horn').click(function(){
             $('audio#horn')[0].play();
@@ -128,6 +129,7 @@ else if($(window).width() <= 700){
          });
          $('#roar').click(function(){
             $('audio#acc')[0].play();
+            $('audio#drive')[1].play();
          });         
     
 }
