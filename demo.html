@@ -76,7 +76,9 @@
     $surface = $('.surface');
     $car = $('.car');
     $img = $('.car img');
-    $key = $('.fa-key')
+    $key = $('.fa-key');
+    $bulb = $('.fa-lightbulb');
+    $sky = $('.scene');
     const cars=['./images/car2.png','./images/car1.png'];
 
       
@@ -87,6 +89,8 @@
             $('audio#start')[0].play();
             $($surface).toggleClass('moveRight');
             $($car).toggleClass('suspension');
+            $($sky).addClass('gradient');
+            $($bulb).addClass('light');
          }); 
          $('#horn').click(function(){
             $('audio#horn')[0].play();
