@@ -219,11 +219,11 @@ ul{
     animation-delay: 2s;
 }
 .moveFast{
-    animation: moveRight 2s linear infinite;  
+    animation: moveRight 5s linear infinite;  
     animation-delay: .5s;
 }
 .movevFast{
-    animation-duration: 1s;
+    animation-duration: 2s;
 }
 .suspension{
     animation: suspension 1s linear infinite;

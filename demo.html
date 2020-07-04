@@ -55,13 +55,13 @@
         <source src="start.mp3" type="audio/mpeg">
       </audio>
       <audio id="faster">
-        <source src="fast.mp3" type="audio/mpeg">
+        <source src="fast.mp3" type="audio/mpeg" preload="auto" autobuffer controls>
       </audio>
       <audio id="horn">
         <source src="horn.mp3" type="audio/mpeg">
       </audio>
       <audio id="acc">
-        <source src="acc.mp3" type="audio/mpeg" preload="auto" autobuffer controls>
+        <source src="acc.mp3" type="audio/mpeg" >
       </audio>
       <audio id="drive">
         <source src="driving.mp3" type="audio/mpeg" preload="auto" autobuffer controls>
@@ -96,11 +96,11 @@
          });
          $('#fast').click(function(){
             $($surface).toggleClass('moveFast');
-            $('audio#faster')[0].play();
+            $('audio#acc')[0].play();
          });
          $('#roar').click(function(){
             $($surface).toggleClass('movevFast');
-            var audio1 = document.getElementById('acc');
+            var audio1 = document.getElementById('faster');
             var audio2 = document.getElementById('drive');
             audio1.play();
             audio2.play();
