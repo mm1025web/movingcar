@@ -308,6 +308,9 @@ ul{
 }
 }
 @media(max-width:495px){
+    .scene{
+        height: 95vh;
+    }
     .moon{
         left: 100px;
     }
