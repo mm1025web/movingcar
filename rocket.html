@@ -1,0 +1,54 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->  
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="rocket.css">
+    <title>JS.</title>
+  </head>
+  <body id="body">
+      <div class="scene">
+          <div class="rocket">
+            <img src="images/rocket.png" alt="rocket" >
+          </div>
+      </div>
+
+ 
+    <!--  JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+      AOS.init();
+    </script>
+    <script>
+   
+    function stars(){
+    let count = 100;
+    let scene = document.querySelector('.scene');
+    let i =0;
+    while(i<count){
+        let star = document.createElement("i");
+        let x = Math.floor(Math.random() * window.innerWidth);
+        let duration = Math.random() * 10;
+        let size = Math.random() * 100;
+         
+         star.style.left = x + 'px';
+         star.style.width = 1 + 'px';
+         star.style.height = 50 +size+ 'px';
+         star.style.animationDuration =  duration + 's';
+
+         scene.appendChild(star);
+         i++;
+        }
+    }
+    stars();
+    </script>
+ </body>
+</html>
