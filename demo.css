@@ -1,74 +1,17 @@
-*{
-    margin: 0;
+body{
+    margin:0;
     padding: 0;
-    box-sizing: border-box;
+    overflow-y: hidden ;
+    background-color: black;
 }
-
-.scene{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    /* background: linear-gradient(#111425,#3751e0); */
-    /* background: linear-gradient(to bottom, #090401 50%,#4B1D06 100%); */
-    /* background: linear-gradient(to bottom, #010A10 30%,#59230B 80%,#2F1107 100%); */
-    /* background: linear-gradient(to bottom, #163C52 0%,#4F4F47 30%,#C5752D 60%,#B7490F 80%, #2F1107 100%); */
-    background-attachment: fixed;
-    overflow: hidden;
-
-    background: linear-gradient(-120deg, #000000,#2b0f0f, #5e220e, #1a3958, #1e528e);
-	background-size:  400%;
-}
-.gradient{
-	animation: gradient 70s ease ;
-}
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 100%;
-	}
-}
-/* @keyframes animateBg {
-    0% {
-      background: #3d3d3d;
-      background: linear-gradient(to bottom, #1e528e 0%,#265889 50%,#9da671 100%); 
-    }
-    20% {
-      background: #ced8e4;
-      background: linear-gradient(to bottom, #1e528e 0%,#728a7c 50%,#e9ce5d 100%); 
-    }
-    40% {
-      background: #1e81f3;
-      background: linear-gradient(#111425,#3751e0);
-      background: linear-gradient(to bottom, #154277 0%,#576e71 30%,#e1c45e 70%,#b26339 100%);  
-
-    }
-    60% {
-      background: #ff7842;
-      background: linear-gradient(to bottom, #163C52 0%,#4F4F47 30%,#C5752D 60%,#B7490F 80%, #2F1107 100%);
-    }
-    80%{
-        background: linear-gradient(to bottom, #010A10 30%,#59230B 80%,#2F1107 100%);
-    }
-    100% {
-      background: #3d3d3d;
-      background: linear-gradient(to bottom, #090401 50%,#4B1D06 100%);
-
-    }
-  } */
 ul{
-    margin-top: 90px;
+    list-style: none;
 }
 .buttons{
+    display: none!important;
     margin: 10px 0px;
     border: none!important;
     outline: none!important;
-    position: absolute;
-    z-index: 99999999999;
 }
 
 .buttons i {
@@ -80,9 +23,9 @@ ul{
     line-height: 40px;
     border-radius: 50%;
     color: rgb(160, 160, 160)!important;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(27,27,27);
     cursor: pointer; 
-    transition: all .2s ease-in;
+    transition: all .2s ease-in-out;
 }
   
 .buttons i:after {
@@ -112,53 +55,36 @@ ul{
 .buttons i:hover {
     color: #111;
 }
-.key{
-    animation: vibrate .6s ease-in-out infinite alternate;
+.night{
+    height: 95vh;
+    width: 100vw;
+    margin: 0 auto;
+    border: 1px black solid;
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.1)), url(images/bg3.jpg);
+    background-size: cover ;
+    position: relative;
+    box-shadow: 1px 2px 60px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
 }
-.light{
-    animation: vibrate .6s ease-in-out 8 alternate;
-    animation-delay: 13s;
+.vehicle{
+    content: url(images/car1.png);
 }
-@keyframes vibrate{
-    0%{
-        transform: scale(1);
-    }
-    
-    100%{
-        transform: scale(1.3);
-    }
+.vehicle2{
+    content: url(images/car2.png);
+}
+.slide{
+    animation: slide 200s linear infinite;
+    animation-delay: 2s;
+}
+.slideFast{
+    animation: slide 100s linear infinite;
+    animation-delay: 2s;
+}
+@keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -4000px 0; }
+}
 
-}
-/* .moon{
-    position: absolute;
-    top: 100px;
-    left: 400px;
-    width: 100px;
-    height: 100px;
-    background: #fff;
-    border-radius: 50%;
-    z-index: 999;
-}
-.moon::after{
-    content: '';
-    position: absolute;
-    top: -15px;
-    left: 15px;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: linear-gradient(#111425,#3751e0);
-    background-attachment: fixed;
-    /* animation: animateBg 35s ease-in; */
-
-.forest{
-    position: absolute ;
-    bottom:0px;
-    background-repeat: repeat-x;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
 .surface{
     height: 140px;
     width: 5000%;
@@ -173,109 +99,18 @@ ul{
 .car
 {
     position: absolute;
-    bottom: 6%;
+    bottom: 7%;
     left: 24%;
-    z-index: 999999;
-}
-.vehicle{
-    content: url(images/car1.png);
-}
-.vehicle2{
-    content: url(images/car2.png);
-}
-.scene i{
-
-    position: absolute;
-    background: #fff;
-    border-radius: 50%;
-    animation: animate linear infinite;
-}
-@keyframes animate {
-    0%{
-        opacity: 0;
-        transform: translateY(0);
-    } 
-    10%,90%{
-        opacity: 1;
-    } 
-    100%{
-        opacity: 0;
-        transform: translateY(-100px);
-    }
-    
-}
-.cloud1{
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width:600px;
-    z-index: 10000;
-    animation: cloud 100s linear infinite;
-}
-.cloud2{
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width:500px;
-    z-index: 10000;
-    animation: cloud 85s linear infinite;
-}
-.cloud3{
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width:600px;
-    z-index: 10000;
-    animation: cloud 130s linear infinite;
-}
-.cloud4{
-    position: absolute;
-    top: 200px;
-    left: 0;
-    max-width:300px;
-    z-index: 10000;
-    animation: cloud 120s linear infinite;
-    animation-delay: -20s;
-}
-.cloud5{
-    position: absolute;
-    top: 150px;
-    left: 0;
-    max-width:500px;
-    z-index: 10000;
-    animation: cloud 90s linear infinite;
-    animation-delay: -5s;
-
-}
-.cloud6{
-    position: absolute;
-    top: 75px;
-    left: 0;
-    max-width:400px;
-    z-index: 10000;
-    animation: cloud 80s linear infinite;
-    animation-delay: -10s;
-
-}
-@keyframes cloud{
-    0%{
-        transform: translateX(400%) scale(1.5);
-    }
-    100%{
-        transform: translateX(-100%) scale(1);
-    }
 }
 .moveRight{
     animation: moveRight 10s linear infinite;
     animation-delay: 2s;
 }
 .moveFast{
-    animation: moveRight 5s linear infinite;  
-    animation-delay: .5s;
+    animation: moveRight 2s linear infinite;  
+    animation-delay: 1s;
 }
-.movevFast{
-    animation-duration: 2s;
-}
+
 .suspension{
     animation: suspension 1s linear infinite;
 }
@@ -296,35 +131,31 @@ ul{
         transform:translateY(-1px);
     }
 }
-
-@media(max-width:900px){
-    @keyframes cloud{
-    0%{
-        transform: translateX(300%) scale(1.5);
+@media(max-width:700px){
+    body{
+        height: 100vh;
     }
-    100%{
-        transform: translateX(-100%) scale(1);
+    .surface{
+        bottom: 0;
+        width: 99999999999%;
     }
-}
-}
-@media(max-width:495px){
-    .moon{
-        left: 100px;
+    .buttons{
+        display: flex!important;
     }
-    @keyframes cloud{
-    0%{
-        transform: translateX(190%) scale(1.5);
+    .moveRight{
+        animation: moveRight 10s linear infinite;
+        animation-delay: 0!important;
     }
-    100%{
-        transform: translateX(-100%) scale(1);
+    .moveFast{
+        animation: moveRight 3s linear infinite;  
+        animation-delay: 1s;
     }
-    
-   }
-   .cloud1,.cloud3,.cloud5{
-        max-width: 150px;
-    }.cloud2,.cloud4,.cloud6{
-        max-width: 250px;
-        
+    .slide{
+        animation: slide 200s linear infinite;
+        animation-delay: 0s;
+    }
+    .slideFast{
+        animation: slide 80s linear infinite;
+        animation-delay: 0s;
     }
 }
-
