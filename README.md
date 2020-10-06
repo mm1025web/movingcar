@@ -1,4 +1,4 @@
-# movingcar
+# JavaScript Animations
 
 - Moving Car - https://mm1025web.github.io/movingcar/
 - Moving Car 2 - https://mm1025web.github.io/movingcar/demo.html
