@@ -1,9 +1,9 @@
 # movingcar
 Add "/rocket.html" or "/demo.html" to see more animations.
 
-Moving Car - https://mm1025web.github.io/movingcar/
-Moving Car 2 - https://mm1025web.github.io/movingcar/demo.html
-Moving Rocket - https://mm1025web.github.io/movingcar/rocket.html
+- Moving Car - https://mm1025web.github.io/movingcar/
+- Moving Car 2 - https://mm1025web.github.io/movingcar/demo.html
+- Moving Rocket - https://mm1025web.github.io/movingcar/rocket.html
 
 
 <p align="left">
